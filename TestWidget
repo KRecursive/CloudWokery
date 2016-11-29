@@ -1,0 +1,88 @@
+###  Test of widget to be cloned
+###  Code entirely developed through the Widget Configurator
+###  https://www.cloudwok.com/developers
+###  STATUS:  Need to remove the email and message form fields.
+
+
+
+<div class="cloudwok-embed" data-wokid="1Xn.">
+    <div class="cloudwok-upload-files"></div>
+    <form class="cloudwok-upload">
+        <div class="cloudwok-dropzone"></div>
+        </form>
+    
+        <div class="cloudwok-upload-message"></div>
+    </div>
+<style>
+    .cloudwok-embed .dropzone {
+        background: #09758E !important;
+        color: #D9E7FF !important;
+        border: solid 3px #425BAC !important;
+    }
+    .cloudwok-embed .dropzone .filepicker {
+        background: #5877C1 !important;
+        color: #D9E7FF !important;
+        border: solid 1px #425BAC !important;
+    }
+    .cloudwok-embed .btn-start-upload {
+        background: #186EAB !important;
+        color: #FFFFFF !important;
+        border: solid 1px #135A8C !important;
+    }
+</style>
+<script>
+    var cloudWokConfig = {
+        "dropzone": {
+            "label": "Click or drag files here.",
+            "button": "ADD FILES"
+        },
+        "success": {
+            "message": {
+                "title": "UPLOAD SUCCESS TITLE",
+                "subtitle": "UPLOAD SUCCESS SUBTITLE",
+                "text": "UPLOAD SUCCESS TEXT",
+                "button": "OK",
+                "noButtonOwnCW": false,
+                "dontpopup": true,
+                "dontslideup": true,
+                "dontfadeout": true
+            },
+            "redirect": ""
+        },
+        "form": {
+            "email": {
+                "placeholder": "Optional comment",
+                "optional": false
+            },
+            "name": {
+                "firstname": {
+                    "placeholder": "Enter your license number",
+                    "required": true
+                },
+                "lastname": {
+                    "placeholder": "Enter your first name",
+                    "required": true
+                }
+            },
+            "message": {
+                "placeholder": "Optional comment",
+                "rows": 3,
+                "optional": false
+            },
+            "button": "UPLOAD",
+            "sent": ""
+        }
+    };
+    document.querySelector(".cloudwok-embed").setAttribute("data-config",
+    JSON.stringify(cloudWokConfig));
+    (function(window, document) {
+    var loader = function() {
+    var script = document.createElement("script"),
+    tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.cloudwok.com/cdn-vassets/javascripts/cw.js";
+    tag.parentNode.insertBefore(script, tag);
+    };
+    window.addEventListener ? window.addEventListener("load", loader, false) :
+    window.attachEvent("onload", loader);
+    })(window, document);
+</script>
