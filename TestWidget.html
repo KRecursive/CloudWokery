@@ -17,17 +17,17 @@
     </div>
 <style>
     .cloudwok-embed .dropzone {
-        background: #09758E !important;
-        color: #D9E7FF !important;
-        border: solid 3px #425BAC !important;
+        background: #ffffff !important;
+        color: #ffffff !important;
+        border: solid 3px #4b8500 !important;
     }
     .cloudwok-embed .dropzone .filepicker {
-        background: #5877C1 !important;
+        background: #4b8500 !important;
         color: #D9E7FF !important;
-        border: solid 1px #425BAC !important;
+        border: solid 1px #4b8500 !important;
     }
     .cloudwok-embed .btn-start-upload {
-        background: #186EAB !important;
+        background: #4b8500 !important;
         color: #FFFFFF !important;
         border: solid 1px #135A8C !important;
     }
@@ -35,8 +35,8 @@
 <script>
     var cloudWokConfig = {
         "dropzone": {
-            "label": "Click or drag files here.",
-            "button": "ADD FILES"
+            "label": " ",
+            "button": "ADD FILES HERE!"
         },
         "success": {
             "message": {
@@ -52,26 +52,17 @@
             "redirect": ""
         },
         "form": {
-            "email": {
-                "placeholder": "Optional comment",
-                "optional": true
-            },
             "name": {
                 "firstname": {
-                    "placeholder": "Enter your license number here",
+                    "placeholder": "Enter your program name here",
                     "required": true
                 },
                 "lastname": {
-                    "placeholder": "Enter your program name here",
+                    "placeholder": "Enter your license number here",
                     "required": true
                 }
             },
-            "message": {
-                "placeholder": "Optional comment",
-                "rows": 3,
-                "optional": true
-            },
-            "button": "UPLOAD",
+            "button": "CLICK TO COMPLETE YOUR UPLOAD",
             "sent": ""
         }
     };
