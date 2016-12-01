@@ -31,6 +31,12 @@
         color: #FFFFFF !important;
         border: solid 1px #135A8C !important;
     }
+    .cloudwok-embed input[name=from_email] {
+        display: none !important;
+    }
+    .cloudwok-embed textarea[name=message] {
+        display: none !important;
+    }
 </style>
 <script>
     var cloudWokConfig = {
@@ -52,6 +58,10 @@
             "redirect": ""
         },
         "form": {
+            "email":  {
+                "placeholder":  "Remove this field",
+                "optional": true
+            }, 
             "name": {
                 "firstname": {
                     "placeholder": "Enter your program name here",
@@ -61,6 +71,11 @@
                     "placeholder": "Enter your license number here",
                     "required": true
                 }
+            },
+            "message":  {
+                "placeholder":  "Remove this field",
+                "rows": 3,
+                "optional": true
             },
             "button": "CLICK TO COMPLETE YOUR UPLOAD",
             "sent": ""
