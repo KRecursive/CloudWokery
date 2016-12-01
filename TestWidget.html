@@ -1,11 +1,12 @@
 ###  Test of widget to be cloned
 ###  Code entirely developed through the Widget Configurator
 ###  https://www.cloudwok.com/developers
-###  STATUS:  Updated colors but need to remove the email and message form fields.
+###  STATUS:  Updated colors and removed the email and message form fields.
 <!DOCTYPE html>
 <html lang="en">
 <body>
 ---------------------------------------------------------------------------------------------------------------------
+
 
 <div class="cloudwok-embed" data-wokid="1Xn.">
     <div class="cloudwok-upload-files"></div>
@@ -31,6 +32,12 @@
         color: #FFFFFF !important;
         border: solid 1px #135A8C !important;
     }
+    .cloudwok-embed input[name=from] {
+        display: none !important;
+    }
+    .cloudwok-embed textarea[name=message] {
+        display: none !important;
+    }
 </style>
 <script>
     var cloudWokConfig = {
@@ -52,6 +59,10 @@
             "redirect": ""
         },
         "form": {
+            "email":  {
+                "placeholder":  "Hide this field",
+                "optional": true
+            }, 
             "name": {
                 "firstname": {
                     "placeholder": "Enter your program name here",
@@ -61,6 +72,11 @@
                     "placeholder": "Enter your license number here",
                     "required": true
                 }
+            },
+            "message":  {
+                "placeholder":  "This field is hidden",
+                "rows": 3,
+                "optional": true
             },
             "button": "CLICK TO COMPLETE YOUR UPLOAD",
             "sent": ""
