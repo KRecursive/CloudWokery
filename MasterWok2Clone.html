@@ -1,0 +1,102 @@
+###  Master copy of the customized CloudWok widget to be cloned
+###  STATUS:  Updated language, colors, and removed the email and message form fields as well as the "upload success" and 
+"terms of service" popups.
+<!DOCTYPE html>
+<html lang="en">
+<body>
+---------------------------------------------------------------------------------------------------------------------
+
+
+<div class="cloudwok-embed" data-wokid="PLACE 4 CHARACTER WOK-ID HERE">
+    <div class="cloudwok-upload-files"></div>
+    <div class="cloudwok-upload">
+        <div class="cloudwok-dropzone"></div>
+        </div>
+    
+        <div class="cloudwok-upload-message"></div>
+    </div>
+<style>
+    .cloudwok-embed .dropzone {
+        background: #ffffff !important;
+        color: #ffffff !important;
+        border: solid 3px #4b8500 !important;
+    }
+    .cloudwok-embed .dropzone .filepicker {
+        background: #4b8500 !important;
+        color: #D9E7FF !important;
+        border: solid 1px #4b8500 !important;
+    }
+    .cloudwok-embed .btn-start-upload {
+        background: #4b8500 !important;
+        color: #FFFFFF !important;
+        border: solid 1px #135A8C !important;
+    }
+    .cloudwok-embed input[name=from] {
+        display: none !important;
+    }
+    .cloudwok-embed textarea[name=message] {
+        display: none !important;
+    }
+</style>
+<script>
+    var cloudWokConfig = {
+        "dropzone": {
+            "label": " ",
+            "button": "ADD FILES HERE!"
+        },
+        "success": {
+            "message": {
+                "title": "UPLOAD SUCCESS TITLE",
+                "subtitle": "UPLOAD SUCCESS SUBTITLE",
+                "text": "UPLOAD SUCCESS TEXT",
+                "button": "OK",
+                "noButtonOwnCW": false,
+                "dontpopup": true,
+                "dontslideup": true,
+                "dontfadeout": true
+            },
+            "redirect": ""
+        },
+        "form": {
+            "email":  {
+                "placeholder":  "Hide this field",
+                "optional": true
+            }, 
+            "name": {
+                "firstname": {
+                    "placeholder": "Enter your program name here",
+                    "required": true
+                },
+                "lastname": {
+                    "placeholder": "Enter your license number here",
+                    "required": true
+                }
+            },
+            "message":  {
+                "placeholder":  "This field is hidden",
+                "rows": 3,
+                "optional": true
+            },
+            "button": "CLICK TO COMPLETE YOUR UPLOAD",
+            "sent": ""
+        }
+    };
+    document.querySelector(".cloudwok-embed").setAttribute("data-config",
+    JSON.stringify(cloudWokConfig));
+    (function(window, document) {
+    var loader = function() {
+    var script = document.createElement("script"),
+    tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.cloudwok.com/cdn-vassets/javascripts/cw.js";
+    tag.parentNode.insertBefore(script, tag);
+    };
+    window.addEventListener ? window.addEventListener("load", loader, false) :
+    window.attachEvent("onload", loader);
+    })(window, document);
+</script>
+
+    
+----------------------------------------------------------------------------------------------------------------------    
+
+</body>
+</html>
